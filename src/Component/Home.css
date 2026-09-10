@@ -1,0 +1,92 @@
+/* Simplified Home Section Styling - Compact & Clean */
+.home-hero-section {
+  padding-top: 90px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+.home-simple-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.home-logo-box {
+  margin-bottom: 14px;
+}
+
+.home-main-logo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 25px rgba(132, 204, 22, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-main-logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(132, 204, 22, 0.5);
+}
+
+.home-main-title {
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  font-weight: 800;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.home-motto-tag {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: var(--accent-lime);
+  margin-bottom: 20px;
+}
+
+.home-about-card {
+  padding: 20px 28px;
+  margin-bottom: 24px;
+  background: rgba(18, 24, 30, 0.7);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  max-width: 720px;
+}
+
+.about-text {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.home-buttons-row {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .home-hero-section {
+    padding-top: 75px;
+    padding-bottom: 30px;
+  }
+  .home-main-logo {
+    width: 105px;
+    height: 105px;
+  }
+  .home-about-card {
+    padding: 16px 20px;
+  }
+  .about-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-buttons-row {
+    flex-direction: column;
+    width: 100%;
+  }
+}

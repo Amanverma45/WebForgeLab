@@ -1,0 +1,236 @@
+/* Navbar Styles */
+.navbar-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 18px 0;
+  transition: all var(--transition-normal);
+}
+
+.navbar-scrolled {
+  padding: 12px 0;
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-subtle);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: drop-shadow(0 0 8px rgba(132, 204, 22, 0.4));
+  transition: transform var(--transition-spring);
+}
+
+.navbar-logo:hover .logo-img {
+  transform: rotate(10deg) scale(1.08);
+}
+
+.logo-text-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-brand-name {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.25rem;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+.logo-highlight {
+  color: var(--accent-lime);
+}
+
+.logo-lab {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-left: 2px;
+}
+
+.logo-tagline {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: var(--text-secondary);
+  margin-top: -2px;
+}
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(18, 24, 30, 0.6);
+  padding: 6px 12px;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(10px);
+}
+
+.nav-link {
+  position: relative;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.nav-link.active {
+  color: #ffffff;
+  background: rgba(132, 204, 22, 0.12);
+  border: 1px solid rgba(132, 204, 22, 0.3);
+}
+
+.active-dot {
+  width: 5px;
+  height: 5px;
+  background-color: var(--accent-lime);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-lime);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-cta-btn {
+  padding: 10px 20px;
+  font-size: 0.88rem;
+}
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  color: #ffffff;
+}
+
+.hamburger-bar {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #ffffff;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.hamburger-bar::before,
+.hamburger-bar::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #ffffff;
+  transition: transform 0.3s;
+}
+
+.hamburger-bar::before {
+  top: -7px;
+}
+
+.hamburger-bar::after {
+  top: 7px;
+}
+
+.hamburger-bar.open {
+  background-color: transparent;
+}
+
+.hamburger-bar.open::before {
+  transform: translateY(7px) rotate(45deg);
+  background-color: var(--accent-lime);
+}
+
+.hamburger-bar.open::after {
+  transform: translateY(-7px) rotate(-45deg);
+  background-color: var(--accent-lime);
+}
+
+.mobile-drawer {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mobile-nav-link {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.mobile-nav-link.active {
+  color: var(--accent-lime);
+  background: rgba(132, 204, 22, 0.1);
+}
+
+.mobile-cta {
+  width: 100%;
+  margin-top: 10px;
+}
+
+@media (max-width: 992px) {
+  .desktop-nav {
+    display: none;
+  }
+  .mobile-toggle {
+    display: block;
+  }
+  .nav-cta-btn {
+    display: none;
+  }
+}

@@ -1,0 +1,41 @@
+/* Simplified Why Choose Us Styling */
+.why-us-simple-section {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+
+.why-us-simple-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 40px;
+  background: rgba(15, 20, 26, 0.75);
+}
+
+.why-us-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.why-us-item {
+  font-size: 1.1rem;
+  color: #e2e8f0;
+  line-height: 1.6;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.why-us-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .why-us-simple-card {
+    padding: 24px 20px;
+  }
+  .why-us-item {
+    font-size: 1rem;
+  }
+}
