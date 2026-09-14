@@ -24,14 +24,31 @@ const ProjectsServices = () => {
     }
   ];
 
-  // Featured Projects
+  // Featured Projects with screenshots (1st: Pandit Hariom Sharma Ji)
   const projects = [
     {
       id: 1,
       title: "Jyotishacharya Pandit Hariom Sharma",
       description: "Official astrology website for Jyotishacharya Pandit Hariom Sharma Ji featuring astrological services, consultation booking, photo gallery, client testimonials, and contact details.",
       tech: ["React.js", "Vite", "CSS3", "JavaScript"],
-      url: "https://pt-hariomsharma.vercel.app/"
+      url: "https://pt-hariomsharma.vercel.app/",
+      image: "/projects/hariomsharma.png"
+    },
+    {
+      id: 2,
+      title: "SwapHub – Product Swap Platform",
+      description: "Full-stack product swapping platform with JWT auth, Cloudinary image uploads, complete swap request workflow (Pending, Accept, Reject), and Framer Motion dashboard animations.",
+      tech: ["React.js", "Node.js", "MongoDB", "Tailwind CSS", "Cloudinary"],
+      url: "https://swaphub45.netlify.app",
+      image: "/projects/swaphub.png"
+    },
+    {
+      id: 3,
+      title: "CareerBridge",
+      description: "Full-stack job recruitment platform featuring OTP verification, Google OAuth, role-based dashboards (candidates, recruiters, admins), job search, resume management, and email notifications.",
+      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
+      url: "https://yourcareerbridge.netlify.app",
+      image: "/projects/careerbridge.png"
     }
   ];
 
@@ -57,7 +74,7 @@ const ProjectsServices = () => {
         </div>
       </section>
 
-      {/* 2. Projects Section (3 Projects with User Netlify Links) */}
+      {/* 2. Projects Section (3 Projects with User Live Links & Screenshots) */}
       <section id="projects" className="section-container projects-simple-section">
         <div className="section-header">
           <div className="section-tag">Featured Projects</div>
@@ -73,6 +90,11 @@ const ProjectsServices = () => {
           {projects.map((proj) => (
             <div key={proj.id} className="glass-card project-simple-card">
               <div>
+                {/* Project Screenshot Banner */}
+                <div className="proj-image-wrapper">
+                  <img src={proj.image} alt={proj.title} className="proj-image" />
+                </div>
+
                 <div className="proj-top-bar">
                   <span className="proj-live-badge">Live Website</span>
                 </div>
