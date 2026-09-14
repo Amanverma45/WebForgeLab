@@ -24,28 +24,14 @@ const ProjectsServices = () => {
     }
   ];
 
-  // 3 Featured Projects with exact Netlify URLs provided by user
+  // Featured Projects
   const projects = [
     {
       id: 1,
-      title: "CareerBridge",
-      description: "Full-stack job recruitment platform featuring OTP verification, Google OAuth, role-based dashboards (candidates, recruiters, admins), job search, resume management, and email notifications.",
-      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT"],
-      netlifyUrl: "https://yourcareerbridge.netlify.app"
-    },
-    {
-      id: 2,
-      title: "SwapHub – Product Swap Platform",
-      description: "Full-stack product swapping platform with JWT auth, Cloudinary image uploads, complete swap request workflow (Pending, Accept, Reject), and Framer Motion dashboard animations.",
-      tech: ["React.js", "Node.js", "MongoDB", "Tailwind CSS", "Cloudinary"],
-      netlifyUrl: "https://swaphub45.netlify.app"
-    },
-    {
-      id: 3,
-      title: "School Management System",
-      description: "MERN stack school management app with complete student record CRUD operations, RESTful API integration, responsive React interface, and Mongoose database operations.",
-      tech: ["React.js", "Node.js", "Express.js", "MongoDB", "Axios"],
-      netlifyUrl: "https://school-management-system111.netlify.app"
+      title: "Jyotishacharya Pandit Hariom Sharma",
+      description: "Official astrology website for Jyotishacharya Pandit Hariom Sharma Ji featuring astrological services, consultation booking, photo gallery, client testimonials, and contact details.",
+      tech: ["React.js", "Vite", "CSS3", "JavaScript"],
+      url: "https://pt-hariomsharma.vercel.app/"
     }
   ];
 
@@ -79,7 +65,7 @@ const ProjectsServices = () => {
             Recent <span className="text-gradient-green">Projects</span>
           </h2>
           <p className="section-subtitle">
-            Click any project button below to visit the live Netlify application!
+            Click any project button below to visit the live website!
           </p>
         </div>
 
@@ -88,7 +74,7 @@ const ProjectsServices = () => {
             <div key={proj.id} className="glass-card project-simple-card">
               <div>
                 <div className="proj-top-bar">
-                  <span className="proj-live-badge">Live Demo</span>
+                  <span className="proj-live-badge">Live Website</span>
                 </div>
                 
                 <h3 className="proj-title">{proj.title}</h3>
@@ -102,14 +88,14 @@ const ProjectsServices = () => {
                   ))}
                 </div>
 
-                {/* Direct Netlify URL Link Button */}
+                {/* Direct Live Link Button */}
                 <a 
-                  href={proj.netlifyUrl} 
+                  href={proj.url} 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="btn-primary proj-netlify-btn"
                 >
-                  <span>View Netlify Live Demo</span>
+                  <span>View Live Website</span>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15 3 21 3 21 9"></polyline>

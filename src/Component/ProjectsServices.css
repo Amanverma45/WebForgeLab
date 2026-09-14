@@ -60,8 +60,9 @@
 
 .projects-simple-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 450px));
   gap: 24px;
+  justify-content: center;
 }
 
 .project-simple-card {
