@@ -1,0 +1,148 @@
+/* About Section Styling (Strict 3 Colors) */
+.about-section {
+  padding-top: 50px;
+  padding-bottom: 60px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 24px;
+}
+
+.about-story-card {
+  padding: 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.story-badge {
+  display: inline-block;
+  align-self: flex-start;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-color);
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-border);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 14px;
+}
+
+.story-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+
+.story-p {
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  line-height: 1.68;
+  margin-bottom: 14px;
+}
+
+.story-p strong {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.about-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.highlight-pill {
+  display: inline-flex;
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid var(--border-subtle);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Skills Card */
+.about-skills-card {
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.skills-card-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.skills-cat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.skill-cat-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skill-cat-name {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.skill-badges-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-badge-item {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-main);
+  background: #f8fafc;
+  border: 1px solid var(--border-subtle);
+  padding: 4px 10px;
+  border-radius: 4px;
+  transition: all var(--transition-fast);
+}
+
+.skill-badge-item:hover {
+  border-color: var(--accent-border);
+  color: var(--accent-color);
+  background: var(--accent-subtle);
+}
+
+@media (max-width: 900px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-story-card,
+  .about-skills-card {
+    padding: 22px 18px;
+  }
+}
