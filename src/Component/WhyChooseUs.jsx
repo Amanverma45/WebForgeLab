@@ -5,21 +5,25 @@ const WhyChooseUs = () => {
   const pillars = [
     {
       num: "01",
+      icon: "🤝",
       title: "Direct Developer Contact",
       desc: "No middlemen or miscommunication. You collaborate directly with Aman Verma from initial brainstorming to final deployment."
     },
     {
       num: "02",
+      icon: "⚡",
       title: "High Performance & Fast Loads",
       desc: "Built with Vite & React for clean bundles, quick rendering, and SEO-friendly architectures that load under a second."
     },
     {
       num: "03",
+      icon: "📱",
       title: "100% Mobile Responsive",
       desc: "Every button, card, and image is tested rigorously to look and feel stunning across all mobile phones, tablets, and laptops."
     },
     {
       num: "04",
+      icon: "🚀",
       title: "Zero-Hassle Live Deployment",
       desc: "Complete setup on Netlify/Vercel, custom domain connection, SSL security, Cloudinary assets, and working contact APIs."
     }
@@ -64,7 +68,10 @@ const WhyChooseUs = () => {
       <div className="why-pillars-grid">
         {pillars.map((item, idx) => (
           <div key={idx} className="glass-card why-pillar-card">
-            <span className="pillar-num">{item.num}</span>
+            <div className="pillar-header">
+              <span className="pillar-icon">{item.icon}</span>
+              <span className="pillar-num">{item.num}</span>
+            </div>
             <h3 className="pillar-title">{item.title}</h3>
             <p className="pillar-desc">{item.desc}</p>
           </div>

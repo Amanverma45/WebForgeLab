@@ -37,11 +37,11 @@ const Footer = () => {
           <div className="footer-contact-snippets">
             <div className="footer-snip-item">
               <span>Phone:</span>
-              <a href="tel:8435856067">8435856067</a>
+              <a href="tel:+918435856067" title="Call +91 8435856067">+91 8435856067</a>
             </div>
             <div className="footer-snip-item">
               <span>Email:</span>
-              <a href="mailto:amanverma13112025@gmail.com">amanverma13112025@gmail.com</a>
+              <a href="mailto:amanverma13112025@gmail.com?subject=Project%20Inquiry%20-%20WebForge%20Lab" title="Send Email">amanverma13112025@gmail.com</a>
             </div>
           </div>
         </div>
@@ -91,13 +91,21 @@ const Footer = () => {
           
           <div className="social-links-row">
             <a 
-              href="https://wa.me/918435856067" 
+              href="https://wa.me/918435856067?text=Hi%20Aman,%20I%20am%20interested%20in%20WebForge%20Lab%20services." 
               target="_blank" 
               rel="noreferrer" 
               className="social-btn" 
-              title="WhatsApp"
+              title="Chat on WhatsApp"
             >
-              WhatsApp
+              💬 WhatsApp
+            </a>
+
+            <a 
+              href="tel:+918435856067" 
+              className="social-btn" 
+              title="Call +91 8435856067"
+            >
+              📞 Call
             </a>
 
             <a 
@@ -105,17 +113,9 @@ const Footer = () => {
               target="_blank" 
               rel="noreferrer" 
               className="social-btn" 
-              title="Instagram"
+              title="Visit Instagram"
             >
-              Instagram
-            </a>
-
-            <a 
-              href="tel:8435856067" 
-              className="social-btn" 
-              title="Call"
-            >
-              Call
+              📸 Instagram
             </a>
           </div>
 

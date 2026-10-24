@@ -28,12 +28,26 @@
   border-color: var(--accent-border);
 }
 
+.pillar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.pillar-icon {
+  font-size: 1.4rem;
+}
+
 .pillar-num {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 800;
   color: var(--accent-color);
-  margin-bottom: 12px;
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-border);
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
 }
 
 .pillar-title {

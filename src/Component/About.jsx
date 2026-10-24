@@ -36,13 +36,17 @@ const About = () => {
       <div className="about-grid">
         {/* Story Card */}
         <div className="glass-card about-story-card">
-          <div className="story-badge">My Philosophy</div>
+          <div className="story-badge-row">
+            <span className="story-badge">My Philosophy</span>
+            <span className="story-status-pill">● Available for Freelance & Contract</span>
+          </div>
+
           <h3 className="story-heading">Engineering Clean, Meaningful Web Experiences</h3>
           <p className="story-p">
             I am <strong>Aman Verma</strong>, a Full-Stack Web Developer. I run <strong>WebForge Lab</strong> to provide individual professionals, startups, and businesses with modern, reliable web applications without confusing agency layers.
           </p>
           <p className="story-p">
-            I have built real-world client platforms — including the official astrology and booking website for <strong>Jyotishacharya Pandit Hariom Sharma Ji</strong> (<a href="https://hanumatkripa-pt.com" target="_blank" rel="noreferrer" style={{ color: 'var(--accent-color)', fontWeight: 600 }}>hanumatkripa-pt.com</a>), as well as full-stack platforms like <strong>SwapHub</strong> (peer-to-peer item exchange) and <strong>CareerBridge</strong> (recruitment portal).
+            I have built real-world client platforms — including the official astrology and booking website for <strong>Jyotishacharya Pandit Hariom Sharma Ji</strong> (<a href="https://hanumatkripa-pt.com" target="_blank" rel="noreferrer" style={{ color: 'var(--accent-color)', fontWeight: 700 }}>hanumatkripa-pt.com ↗</a>), as well as full-stack platforms like <strong>SwapHub</strong> (peer-to-peer item exchange) and <strong>CareerBridge</strong> (recruitment portal).
           </p>
           <p className="story-p">
             My commitment: <em>Clean code, intuitive user interfaces, and guaranteed responsiveness on every screen.</em>
@@ -50,12 +54,15 @@ const About = () => {
 
           <div className="about-highlights">
             <div className="highlight-pill">
+              <span className="pill-dot">⚡</span>
               <span>Fast Turnaround Times</span>
             </div>
             <div className="highlight-pill">
+              <span className="pill-dot">🤝</span>
               <span>Direct Developer Contact</span>
             </div>
             <div className="highlight-pill">
+              <span className="pill-dot">📱</span>
               <span>Mobile-First Quality</span>
             </div>
           </div>
