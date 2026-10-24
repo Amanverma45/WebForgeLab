@@ -55,6 +55,7 @@ const Footer = () => {
             <li><button onClick={() => scrollTo('services')}>Services</button></li>
             <li><button onClick={() => scrollTo('projects')}>Projects</button></li>
             <li><button onClick={() => scrollTo('why-us')}>Why Choose Us</button></li>
+            <li><button onClick={() => scrollTo('reviews')}>Client Reviews</button></li>
             <li><button onClick={() => scrollTo('faq')}>FAQ</button></li>
             <li><button onClick={() => scrollTo('contact')}>Contact</button></li>
           </ul>

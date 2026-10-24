@@ -4,6 +4,7 @@ import Home from './Component/Home';
 import About from './Component/About';
 import ProjectsServices from './Component/ProjectsServices';
 import WhyChooseUs from './Component/WhyChooseUs';
+import Testimonials from './Component/Testimonials';
 import FAQ from './Component/FAQ';
 import GetInTouch from './Component/GetInTouch';
 import Footer from './Component/Footer';
@@ -13,7 +14,7 @@ function App() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
-    const sectionIds = ['home', 'about', 'services', 'projects', 'why-us', 'faq', 'contact'];
+    const sectionIds = ['home', 'about', 'services', 'projects', 'why-us', 'reviews', 'faq', 'contact'];
     
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
@@ -46,6 +47,7 @@ function App() {
         <About />
         <ProjectsServices />
         <WhyChooseUs />
+        <Testimonials />
         <FAQ />
         <GetInTouch />
       </main>
