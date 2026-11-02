@@ -28,7 +28,11 @@ const Testimonials = () => {
       if (error) {
         console.error('Error fetching reviews from Supabase:', error);
       } else if (data) {
-        setReviews(data);
+        // Exclude test / placeholder reviews
+        const cleanReviews = data.filter(
+          item => item.name !== 'Test Client' && !item.review?.toLowerCase().includes('testing supabase')
+        );
+        setReviews(cleanReviews);
       }
     } catch (e) {
       console.error('Error reading reviews:', e);
