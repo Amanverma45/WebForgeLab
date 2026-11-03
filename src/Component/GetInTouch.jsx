@@ -57,7 +57,7 @@ const GetInTouch = () => {
       <div className="section-header">
         <div className="section-tag">Contact</div>
         <h2 className="section-title">
-          Get In Touch with <span className="text-accent">Aman Verma</span>
+          Get In Touch with <span className="text-accent">WebForge Lab</span>
         </h2>
         <p className="section-subtitle">
           Have an idea or need a website? Reach out directly via WhatsApp, Phone, or Email.
@@ -86,11 +86,11 @@ const GetInTouch = () => {
 
         {/* WhatsApp Card */}
         <a
-          href="https://wa.me/917225853754?text=Hi%20Aman,%20I%20am%20interested%20in%20WebForge%20Lab%20services."
+          href="https://api.whatsapp.com/send?phone=917225853754"
           target="_blank"
           rel="noopener noreferrer"
           className="glass-card contact-channel-card whatsapp-channel-card"
-          title="Direct WhatsApp Chat with Aman (+91 7225853754)"
+          title="Direct WhatsApp Chat with WebForge Lab (+91 7225853754)"
         >
           <div className="channel-icon-circle wa-circle">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
