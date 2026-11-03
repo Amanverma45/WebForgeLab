@@ -37,7 +37,7 @@ const Footer = () => {
           <div className="footer-contact-snippets">
             <div className="footer-snip-item">
               <span>Phone:</span>
-              <a href="tel:+918435856067" title="Call +91 8435856067">+91 8435856067</a>
+              <a href="tel:+917225853754" title="Call +91 7225853754">+91 7225853754</a>
             </div>
             <div className="footer-snip-item">
               <span>Email:</span>
@@ -92,7 +92,7 @@ const Footer = () => {
           
           <div className="social-links-row">
             <a 
-              href="https://wa.me/918435856067?text=Hi%20Aman,%20I%20am%20interested%20in%20WebForge%20Lab%20services." 
+              href="https://wa.me/917225853754?text=Hi%20Aman,%20I%20am%20interested%20in%20WebForge%20Lab%20services." 
               target="_blank" 
               rel="noreferrer" 
               className="social-btn" 
@@ -102,9 +102,9 @@ const Footer = () => {
             </a>
 
             <a 
-              href="tel:+918435856067" 
+              href="tel:+917225853754" 
               className="social-btn" 
-              title="Call +91 8435856067"
+              title="Call +91 7225853754"
             >
               📞 Call
             </a>

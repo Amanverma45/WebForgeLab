@@ -27,7 +27,7 @@ const FAQ = () => {
     },
     {
       q: "How can I consult with Aman Verma to start my project?",
-      a: "You can reach out directly via WhatsApp at +91 8435856067, make a phone call, or submit a message through the contact form below. I will respond quickly to discuss your requirements and provide a clear timeline."
+      a: "You can reach out directly via WhatsApp at +91 7225853754, make a phone call, or submit a message through the contact form below. I will respond quickly to discuss your requirements and provide a clear timeline."
     }
   ];
 

@@ -68,9 +68,9 @@ const GetInTouch = () => {
       <div className="contact-cards-grid">
         {/* Phone Call Card */}
         <a 
-          href="tel:+918435856067" 
+          href="tel:+917225853754" 
           className="glass-card contact-channel-card phone-channel-card"
-          title="Direct Phone Call to Aman Verma (+91 8435856067)"
+          title="Direct Phone Call to Aman Verma (+91 7225853754)"
         >
           <div className="channel-icon-circle phone-circle">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
@@ -79,18 +79,18 @@ const GetInTouch = () => {
           </div>
           <div className="channel-info">
             <span className="channel-label">Direct Phone Call</span>
-            <h4 className="channel-val">+91 8435856067</h4>
+            <h4 className="channel-val">+91 7225853754</h4>
             <span className="channel-action-badge phone-badge">Tap to Call 📞</span>
           </div>
         </a>
 
         {/* WhatsApp Card */}
         <a
-          href="https://wa.me/918435856067?text=Hi%20Aman,%20I%20am%20interested%20in%20WebForge%20Lab%20services."
+          href="https://wa.me/917225853754?text=Hi%20Aman,%20I%20am%20interested%20in%20WebForge%20Lab%20services."
           target="_blank"
           rel="noopener noreferrer"
           className="glass-card contact-channel-card whatsapp-channel-card"
-          title="Direct WhatsApp Chat with Aman (+91 8435856067)"
+          title="Direct WhatsApp Chat with Aman (+91 7225853754)"
         >
           <div className="channel-icon-circle wa-circle">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -99,7 +99,7 @@ const GetInTouch = () => {
           </div>
           <div className="channel-info">
             <span className="channel-label">WhatsApp Chat</span>
-            <h4 className="channel-val">+91 8435856067</h4>
+            <h4 className="channel-val">+91 7225853754</h4>
             <span className="channel-action-badge wa-badge">Direct Chat 💬</span>
           </div>
         </a>

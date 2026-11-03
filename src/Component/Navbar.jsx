@@ -79,11 +79,11 @@ const Navbar = ({ activeSection, setActiveSection }) => {
         {/* Action CTAs */}
         <div className="navbar-actions">
           <a
-            href="https://wa.me/918435856067?text=Hi%20Aman,%20I%20am%20interested%20in%20WebForge%20Lab%20services."
+            href="https://wa.me/917225853754?text=Hi%20Aman,%20I%20am%20interested%20in%20WebForge%20Lab%20services."
             target="_blank"
             rel="noopener noreferrer"
             className="nav-whatsapp-link"
-            title="Chat directly on WhatsApp (+91 8435856067)"
+            title="Chat directly on WhatsApp (+91 7225853754)"
           >
             <span>WhatsApp</span>
           </a>
@@ -123,14 +123,14 @@ const Navbar = ({ activeSection, setActiveSection }) => {
           </nav>
           <div className="mobile-actions">
             <a
-              href="tel:+918435856067"
+              href="tel:+917225853754"
               className="btn-secondary mobile-btn"
               title="Call Aman Verma directly"
             >
-              📞 Call: +91 8435856067
+              📞 Call: +91 7225853754
             </a>
             <a
-              href="https://wa.me/918435856067?text=Hi%20Aman,%20I%20am%20interested%20in%20WebForge%20Lab%20services."
+              href="https://wa.me/917225853754?text=Hi%20Aman,%20I%20am%20interested%20in%20WebForge%20Lab%20services."
               target="_blank"
               rel="noopener noreferrer"
               className="btn-secondary mobile-btn"
