@@ -110,9 +110,28 @@ const Navbar = ({ activeSection, setActiveSection }) => {
         aria-hidden="true"
       />
 
-      {/* Mobile Drawer */}
-      <div className={`mobile-drawer ${mobileMenuOpen ? 'open' : ''}`}>
-        <div className="mobile-drawer-inner">
+      {/* Mobile Side Slider Drawer */}
+      <aside className={`mobile-drawer ${mobileMenuOpen ? 'open' : ''}`} aria-label="Mobile Navigation">
+        {/* Drawer Header */}
+        <div className="mobile-drawer-header">
+          <div className="mobile-drawer-brand">
+            <img src="/logo.png" alt="WebForge Lab" className="drawer-logo-img" />
+            <div className="drawer-logo-text">
+              <span className="drawer-brand-name">WEB<span>FORGE</span></span>
+              <span className="drawer-dev-tag">LAB</span>
+            </div>
+          </div>
+          <button 
+            className="mobile-drawer-close"
+            onClick={() => setMobileMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            ✕
+          </button>
+        </div>
+
+        {/* Drawer Body Links */}
+        <div className="mobile-drawer-body">
           <div className="mobile-section-heading">
             Current Section: <strong>{activeLabel}</strong>
           </div>
@@ -129,32 +148,34 @@ const Navbar = ({ activeSection, setActiveSection }) => {
               </button>
             ))}
           </nav>
-          <div className="mobile-actions">
-            <a
-              href="tel:+917225853754"
-              className="btn-secondary mobile-btn"
-              title="Call Aman Verma directly"
-            >
-              📞 Call: +91 7225853754
-            </a>
-            <a
-              href="https://wa.me/917225853754?text=Hi%20Aman,%20I%20am%20interested%20in%20WebForge%20Lab%20services."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-secondary mobile-btn"
-              title="WhatsApp Aman Verma"
-            >
-              💬 WhatsApp Chat
-            </a>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="btn-primary mobile-btn"
-            >
-              ✉️ Contact Aman
-            </button>
-          </div>
         </div>
-      </div>
+
+        {/* Drawer Footer Actions */}
+        <div className="mobile-drawer-footer">
+          <a
+            href="tel:+917225853754"
+            className="btn-secondary mobile-btn"
+            title="Call Aman Verma directly"
+          >
+            📞 Call: +91 7225853754
+          </a>
+          <a
+            href="https://wa.me/917225853754?text=Hi%20Aman,%20I%20am%20interested%20in%20WebForge%20Lab%20services."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary mobile-btn"
+            title="WhatsApp Aman Verma"
+          >
+            💬 WhatsApp Chat
+          </a>
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="btn-primary mobile-btn"
+          >
+            ✉️ Contact Aman
+          </button>
+        </div>
+      </aside>
     </header>
   );
 };
