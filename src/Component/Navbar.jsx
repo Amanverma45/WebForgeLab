@@ -103,18 +103,26 @@ const Navbar = ({ activeSection, setActiveSection }) => {
         </div>
       </div>
 
+      {/* Mobile Drawer Backdrop */}
+      <div 
+        className={`mobile-drawer-backdrop ${mobileMenuOpen ? 'open' : ''}`} 
+        onClick={() => setMobileMenuOpen(false)}
+        aria-hidden="true"
+      />
+
       {/* Mobile Drawer */}
-      {mobileMenuOpen && (
-        <div className="mobile-drawer">
+      <div className={`mobile-drawer ${mobileMenuOpen ? 'open' : ''}`}>
+        <div className="mobile-drawer-inner">
           <div className="mobile-section-heading">
             Current Section: <strong>{activeLabel}</strong>
           </div>
           <nav className="mobile-nav-links">
-            {navItems.map((item) => (
+            {navItems.map((item, idx) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
                 className={`mobile-nav-link ${activeSection === item.id ? 'active' : ''}`}
+                style={{ '--item-index': idx }}
               >
                 <span>{item.label}</span>
                 {activeSection === item.id && <span className="mobile-check">✓</span>}
@@ -146,7 +154,7 @@ const Navbar = ({ activeSection, setActiveSection }) => {
             </button>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 };

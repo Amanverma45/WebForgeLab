@@ -172,27 +172,32 @@
   background: #f1f5f9;
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
-  padding: 8px;
+  padding: 9px;
   cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.mobile-toggle:active {
+  transform: scale(0.9);
 }
 
 .hamburger-line {
   display: block;
-  width: 20px;
+  width: 22px;
   height: 2px;
   background: var(--text-main);
   position: relative;
-  transition: background-color 0.2s;
+  transition: background-color 0.25s ease;
 }
 
 .hamburger-line::before,
 .hamburger-line::after {
   content: '';
   position: absolute;
-  width: 20px;
+  width: 22px;
   height: 2px;
   background: var(--text-main);
-  transition: transform 0.2s;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), top 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s;
 }
 
 .hamburger-line::before {
@@ -204,84 +209,28 @@
 }
 
 .hamburger-line.open {
-  background: transparent;
+  background: transparent !important;
 }
 
 .hamburger-line.open::before {
-  transform: translateY(6px) rotate(45deg);
+  top: 0;
+  transform: rotate(45deg);
   background: var(--accent-color);
 }
 
 .hamburger-line.open::after {
-  transform: translateY(-6px) rotate(-45deg);
+  top: 0;
+  transform: rotate(-45deg);
   background: var(--accent-color);
 }
 
-/* Mobile Drawer */
+/* Mobile Drawer & Backdrop (Hidden on Desktop) */
+.mobile-drawer-backdrop {
+  display: none;
+}
+
 .mobile-drawer {
-  background: #ffffff;
-  border-bottom: 1px solid var(--border-subtle);
-  padding: 16px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.06);
-}
-
-.mobile-section-heading {
-  font-size: 0.84rem;
-  color: var(--text-muted);
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--border-subtle);
-}
-
-.mobile-section-heading strong {
-  color: var(--accent-color);
-}
-
-.mobile-nav-links {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.mobile-nav-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: none;
-  border: none;
-  color: var(--text-secondary);
-  font-size: 0.94rem;
-  font-weight: 600;
-  text-align: left;
-  padding: 10px 12px;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-}
-
-.mobile-nav-link.active {
-  background: var(--accent-subtle);
-  color: var(--accent-color);
-  font-weight: 700;
-}
-
-.mobile-check {
-  color: var(--accent-color);
-  font-weight: 800;
-}
-
-.mobile-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding-top: 8px;
-  border-top: 1px solid var(--border-subtle);
-}
-
-.mobile-btn {
-  width: 100%;
-  text-align: center;
+  display: none;
 }
 
 @media (max-width: 960px) {
@@ -296,5 +245,154 @@
   }
   .nav-whatsapp-link {
     display: none;
+  }
+
+  /* Mobile Backdrop */
+  .mobile-drawer-backdrop {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    z-index: 998;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .mobile-drawer-backdrop.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Animated Mobile Drawer */
+  .mobile-drawer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border-subtle);
+    box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.15);
+    z-index: 999;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    overflow: hidden;
+    transition: max-height 0.42s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.28s ease,
+                transform 0.38s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .mobile-drawer.open {
+    max-height: 85vh;
+    overflow-y: auto;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .mobile-drawer-inner {
+    padding: 16px 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .mobile-section-heading {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .mobile-section-heading strong {
+    color: var(--accent-color);
+  }
+
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .mobile-nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.96rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 11px 14px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    opacity: 0;
+    transform: translateX(-14px);
+    transition: opacity 0.22s ease,
+                transform 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.15s ease,
+                color 0.15s ease,
+                padding-left 0.2s ease;
+  }
+
+  .mobile-drawer.open .mobile-nav-link {
+    opacity: 1;
+    transform: translateX(0);
+    transition-delay: calc(var(--item-index, 0) * 0.032s + 0.06s);
+  }
+
+  .mobile-nav-link:hover {
+    background: #f1f5f9;
+    color: var(--accent-color);
+    padding-left: 18px;
+  }
+
+  .mobile-nav-link:active {
+    transform: scale(0.98);
+  }
+
+  .mobile-nav-link.active {
+    background: var(--accent-subtle);
+    color: var(--accent-color);
+    font-weight: 700;
+  }
+
+  .mobile-check {
+    color: var(--accent-color);
+    font-weight: 800;
+  }
+
+  .mobile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-subtle);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease 0.25s, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1) 0.25s;
+  }
+
+  .mobile-drawer.open .mobile-actions {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .mobile-btn {
+    width: 100%;
+    text-align: center;
   }
 }
